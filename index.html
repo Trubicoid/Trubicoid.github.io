@@ -1,25 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>School Heist</title>
+  <title>Sonne und Beton - Schulraub</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="game-container">
     <canvas id="gameCanvas" width="800" height="600"></canvas>
-    <div id="game-info">
+
+    <!-- Prologue Overlay -->
+    <div id="prologueOverlay" class="overlay" style="display: none;">
+      <div id="prologueContent">
+        <img id="prologueImage" style="display: none; max-width:100px; margin-bottom:10px;"/>
+        <div id="prologueText" class="speech-bubble"></div>
+      </div>
+      <p id="prologueClick" style="text-align:center; margin-top:10px; font-style: italic;">
+        Klicke, um fortzufahren
+      </p>
+    </div>
+
+    <!-- Game UI -->
+    <div id="game-info" style="display: none;">
       <p>Score: <span id="score">0</span></p>
       <p>Time Left: <span id="timeLeft">180</span></p>
     </div>
-    <button id="startButton">Start Game</button>
-    <div id="gameOverScreen" style="display: none;">
-      <h1>Game Over!</h1>
+    <button id="startButton" style="display: none;">Spiel Starten</button>
+
+    <!-- Endings Overlay -->
+    <div id="endOverlay" class="overlay" style="display: none;">
+      <div id="endContent">
+        <img id="endImage" style="display: none; max-width:100px; margin-bottom:10px;"/>
+        <div id="endText" class="speech-bubble"></div>
+      </div>
+      <p id="endingClick" style="text-align:center; margin-top:10px; font-style: italic;">
+        Klicke, um weiterzumachen
+      </p>
+    </div>
+
+    <!-- Summary Screen -->
+    <div id="summaryScreen" style="display: none;">
+      <h1>Spiel beendet!</h1>
       <p>Final Score: <span id="finalScore">0</span></p>
-      <button id="restartButton">Restart</button>
+      <button id="restartButton">Nochmal versuchen</button>
     </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
