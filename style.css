@@ -4,34 +4,33 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
-}
-
-.container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .game-container {
+    position: relative; /* Important for positioning the game-over screen */
     text-align: center;
-}
-
-input[type="number"] {
-    padding: 8px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
+  }
+  
+  #gameCanvas {
+    background-color: #fff;
+    border: 1px solid #000;
+  }
+  
+  #game-info {
+    margin-top: 10px;
+  }
+  
+  #gameOverScreen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #3e8e41;
-}
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
