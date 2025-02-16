@@ -9,7 +9,7 @@ const ctx = canvas.getContext("2d");
 // Speeds & Durations
 const PLAYER_SPEED  = 2;
 const TEACHER_SPEED = 1.5; // Slightly faster than player
-const GAME_DURATION = 60;  // 1 minute
+const GAME_DURATION = 80;  // 1 minute
 const FPS           = 60;
 
 // Scale bounding boxes relative to tile size
@@ -125,7 +125,7 @@ const prologueLines = [
   { speaker:"Lukas", text:"Bist du verrückt? Das fliegt doch auf!" },
   { speaker:"Sanchez", text:"Keine Sorge, ich hab' einen Plan. Wir machen das heute Nacht."},
   { speaker:"Lukas", text:"(Will zuerst nicht mitkommen, trotzdem beschliesst er schliesslich mitzumachen...)"},
-  { speaker:"Anleitung", text:"(Klaut die Computer und bringt sie zum Ausgang. Zeit: 60s, man kann nur 1 Computer aufeinmal tragen.)"}
+  { speaker:"Anleitung", text:"(Klaut die Computer und bringt sie zum Ausgang. Zeit: 80s, man kann nur 1 Computer aufeinmal tragen.)"}
 ];
 let prologueIndex=0;
 
